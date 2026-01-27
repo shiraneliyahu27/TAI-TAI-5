@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TAI TAI הפקות | ימי הולדת, הצגות ילדים ואירועים</title>
+  <meta name="description" content="TAI TAI הפקות – הפעלות לימי הולדת, הצגות ילדים, מסיבות רווקות ואירועים שונים. חוויה שמחה, מצחיקה ומותאמת לקהל. הזמנה בוואטסאפ." />
+
+  <style>
+    :root{
+      --bg:#fffaf3;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --accent:#ec4899;
+      --accent2:#fb7185;
+      --line:#f6d7e6;
+      --shadow: 0 10px 24px rgba(0,0,0,.08);
+      --radius: 18px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Arial;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% 10%, #ffe4f1 0%, transparent 55%),
+        radial-gradient(900px 500px at 85% 0%, #fff1d6 0%, transparent 55%),
+        var(--bg);
+    }
+
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:18px}
+
+    header{
+      position:sticky; top:0; z-index:10;
+      background: rgba(255,255,255,.85);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid #f3e8ff;
+    }
+
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:800}
+    .logo{
+      width:40px;height:40px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:var(--shadow);
+    }
+
+    .navlinks{display:flex;gap:12px;flex-wrap:wrap;font-weight:600;font-size:14px}
+    .navlinks a{text-decoration:none;padding:8px 10px;border-radius:12px}
+    .navlinks a:hover{background:#fff}
+
+    .btn{
+      padding:10px 14px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:700;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+    }
+    .btn.primary{
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+    .btn.ghost{
+      background:#fff;
+      border:1px solid #f3e8ff;
+    }
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;padding:24px 0}
+    .heroCard{
+      background:#fff;
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:var(--shadow);
+      border:1px solid #f3e8ff;
+    }
+    h1{font-size:36px;margin:10px 0}
+    .sub{color:var(--muted);line-height:1.7}
+
+    .photo{
+      border:1px dashed #f6b6d4;
+      border-radius:var(--radius);
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:20px;
+      font-weight:700;
+      color:#9d174d;
+      min-height:260px;
+    }
+
+    section{padding:24px 0}
+    h2{margin-bottom:12px}
+
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{
+      background:#fff;
+      padding:16px;
+      border-radius:var(--radius);
+      border:1px solid #f3e8ff;
+      box-shadow:0 6px 16px rgba(0,0,0,.06);
+    }
+
+    .tag{
+      background:#fff0f7;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:12px;
+      font-weight:700;
+      color:#9d174d;
+      margin-left:6px;
+      display:inline-block;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+    .ph{
+      border:1px dashed #f6b6d4;
+      border-radius:16px;
+      min-height:140px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:#9d174d;
+    }
+
+    footer{text-align:center;color:var(--muted);font-size:13px;padding:24px 0}
+
+    .floatWA{
+      position:fixed;bottom:16px;right:16px;
+      display:flex;gap:10px;z-index:50;
+    }
+    .waBtn,.callBtn{
+      width:56px;height:56px;
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+      color:#fff;
+      text-decoration:none;
+      box-shadow:var(--shadow);
+    }
+    .waBtn{background:#ec4899}
+    .callBtn{background:#111827}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      h1{font-size:30px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <div>TAI TAI הפקות</div>
+        <div style="font-size:12px;color:var(--muted)">
+          ימי הולדת • הצגות ילדים • מסיבות רווקות • אירועים
+        </div>
+      </div>
+    </div>
+
+    <nav class="navlinks">
+      <a href="#services">מה כולל?</a>
+      <a href="#gallery">גלריה</a>
+      <a href="#contact">יצירת קשר</a>
+    </nav>
+
+    <div>
+      <a class="btn ghost" href="tel:+972545896882">📞 התקשר/י</a>
+      <a class="btn primary" target="_blank"
+         href="https://wa.me/972545896882?text=היי%20אשמח%20לקבל%20פרטים%20על%20הפעלה%20ליום%20הולדת%20או%20אירוע">
+        💬 וואטסאפ
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="hero">
+    <div class="heroCard">
+      <h1>ימי הולדת, הצגות ילדים<br>ואירועים שעושים שמח</h1>
+      <p class="sub">
+        TAI TAI הפקות מתמחה בהפעלות לימי הולדת, הצגות ילדים, מסיבות רווקות ואירועים שונים.
+        חוויה שמחה, מצחיקה וסוחפת – עם משחקים, מוזיקה, ריקודים והשתתפות מלאה של הקהל.
+      </p>
+      <a class="btn primary" href="#contact">בדיקת תאריך פנוי</a>
+    </div>
+
+    <div class="photo">
+    תמונה 1
+    </div>
+  </div>
+
+  <section id="services">
+    <h2>מה כולל השירות?</h2>
+    <div class="grid3">
+      <div class="card">
+        <h3>🎭 הצגות ילדים</h3>
+        <p class="sub">הצגות חווייתיות עם דמויות, סיפור ושיתוף הילדים.</p>
+        <span class="tag">מצחיק</span><span class="tag">חינוכי</span>
+      </div>
+      <div class="card">
+        <h3>🎉 ימי הולדת</h3>
+        <p class="sub">משחקים, מוזיקה, ריקודים וטקס יום הולדת מרגש.</p>
+        <span class="tag">מותאם גיל</span><span class="tag">שמחה</span>
+      </div>
+      <div class="card">
+        <h3>💃 מסיבות רווקות ואירועים</h3>
+        <p class="sub">הפעלות מגבשות, מצחיקות ומלאות אנרגיה.</p>
+        <span class="tag">גיבוש</span><span class="tag">כיף</span>
+      </div>
+      <div class="card">
+        <h3>🔴 ערבי בינגו</h3>
+        <p class="sub">הנחיית ערבי בינגו חוויתיים מגבשים ומהנים, מתאים לחברות.</p>
+        <span class="tag">גיבוש</span><span class="tag">כיף</span>
+    </div>
+  </section>
+
+<section id="gallery">
+  <h2>גלריה</h2>
+
+  <p class="gallery-desc">
+    TAI TAI הפקות – הפקות והנחיית אירועים עם אנרגיה, שמחה וחיוך גדול 🎉  
+    ערבי בינגו חווייתיים, ימי הולדת, מסיבות רווקות, הצגות ילדים ואירועים מיוחדים
+  </p>
+
+  <div class="gallery">
+    <img src="images/gallery1.jpg" alt="TAI TAI הפקות – ערב בינגו">
+    <img src="images/gallery2.jpg" alt="TAI TAI הפקות – הנחיית אירוע">
+    <img src="images/gallery3.jpg" alt="TAI TAI הפקות – הפעלה לילדים">
+    <img src="images/gallery4.jpg" alt="TAI TAI הפקות – אירוע שמח">
+  </div>
+</section>
+
+  <section id="contact">
+    <h2>יצירת קשר</h2>
+    <p class="sub">
+      📞 054-5896882  שירן <br>
+      💬 <a target="_blank" href="https://wa.me/972545896882">שלחי וואטסאפ</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="y"></span> TAI TAI הפקות
+</footer>
+
+<div class="floatWA">
+  <a class="callBtn" href="tel:+972545896882">📞</a>
+  <a class="waBtn" target="_blank" href="https://wa.me/972545896882">💬</a>
+</div>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
