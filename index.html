@@ -137,34 +137,53 @@
       color:#9d174d;
     }
 
- .gallery{
+.gallery{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
 }
 
-.gallery img{
+.gallery-item{
+  position:relative;
   width:100%;
-  aspect-ratio: 1 / 1;   /* ריבוע אמיתי */
-  object-fit: cover;     /* ממלא וחותך יפה */
-  border-radius:16px;
-  border:1px solid #f3e8ff;
-  box-shadow:0 6px 16px rgba(0,0,0,.06);
-  cursor:pointer;
+  aspect-ratio:1 / 1;
+  overflow:hidden;
+  border-radius:18px;
   background:#fff;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.gallery-item img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .35s ease;
+  cursor:pointer;
+}
+
+/* זום עדין */
+.gallery-item:hover img{
+  transform:scale(1.06);
 }
 
 /* טאבלט */
 @media(max-width:900px){
-  .gallery{grid-template-columns:repeat(2,1fr)}
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
 }
 
 /* מובייל */
 @media(max-width:600px){
-  .gallery{grid-template-columns:repeat(2,1fr)}
-  .gallery img{border-radius:14px}
+  .gallery{
+    gap:12px;
+  }
+  .gallery-item{
+    border-radius:14px;
+  }
 }
-
 
     /* LIGHTBOX */
     #lightbox{
@@ -263,12 +282,21 @@
 
   <section id="gallery">
     <h2>גלריה</h2>
-    <div class="gallery">
-      <img src="images/gallery1.png" onclick="openImg(this.src)">
-      <img src="images/gallery2.jpg" onclick="openImg(this.src)">
-      <img src="images/gallery3.jpg" onclick="openImg(this.src)">
-      <img src="images/gallery4.png" onclick="openImg(this.src)">
-    </div>
+ <div class="gallery">
+  <div class="gallery-item">
+    <img src="images/gallery1.png" onclick="openImg(this.src)">
+  </div>
+  <div class="gallery-item">
+    <img src="images/gallery2.jpg" onclick="openImg(this.src)">
+  </div>
+  <div class="gallery-item">
+    <img src="images/gallery3.jpg" onclick="openImg(this.src)">
+  </div>
+  <div class="gallery-item">
+    <img src="images/gallery4.png" onclick="openImg(this.src)">
+  </div>
+</div>
+
   </section>
 
   <section id="contact">
@@ -307,5 +335,6 @@
 
 </body>
 </html>
+
 
 
