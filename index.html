@@ -83,24 +83,22 @@
     h1{font-size:36px;margin:10px 0}
     .sub{color:var(--muted);line-height:1.7}
 
-    .photo{
-      border:1px dashed #f6b6d4;
-      border-radius:var(--radius);
-      background:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:20px;
-      font-weight:700;
-      color:#9d174d;
+    .heroImg{
+      width:100%;
+      height:100%;
       min-height:260px;
+      object-fit:cover;
+      border-radius:var(--radius);
+      border:1px solid #f3e8ff;
+      box-shadow:0 6px 16px rgba(0,0,0,.06);
+      background:#fff;
     }
 
     section{padding:24px 0}
     h2{margin-bottom:12px}
 
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    /* 4 כרטיסים */
+    .grid3{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
     .card{
       background:#fff;
       padding:16px;
@@ -125,16 +123,23 @@
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:12px;
+      margin-top:12px;
     }
-    .ph{
-      border:1px dashed #f6b6d4;
+
+    .gallery img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
       border-radius:16px;
-      min-height:140px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:700;
-      color:#9d174d;
+      border:1px solid #f3e8ff;
+      box-shadow:0 6px 16px rgba(0,0,0,.06);
+      background:#fff;
+    }
+
+    .gallery-desc{
+      color:var(--muted);
+      line-height:1.7;
+      margin-top:-6px;
     }
 
     footer{text-align:center;color:var(--muted);font-size:13px;padding:24px 0}
@@ -208,56 +213,60 @@
       <a class="btn primary" href="#contact">בדיקת תאריך פנוי</a>
     </div>
 
-    <div class="photo">
-    תמונה 1
-    </div>
+    <!-- תמונת הירו -->
+    <img class="heroImg" src="images/gallery1.png" alt="TAI TAI הפקות">
   </div>
 
   <section id="services">
     <h2>מה כולל השירות?</h2>
+
     <div class="grid3">
       <div class="card">
         <h3>🎭 הצגות ילדים</h3>
         <p class="sub">הצגות חווייתיות עם דמויות, סיפור ושיתוף הילדים.</p>
         <span class="tag">מצחיק</span><span class="tag">חינוכי</span>
       </div>
+
       <div class="card">
         <h3>🎉 ימי הולדת</h3>
         <p class="sub">משחקים, מוזיקה, ריקודים וטקס יום הולדת מרגש.</p>
         <span class="tag">מותאם גיל</span><span class="tag">שמחה</span>
       </div>
+
       <div class="card">
         <h3>💃 מסיבות רווקות ואירועים</h3>
         <p class="sub">הפעלות מגבשות, מצחיקות ומלאות אנרגיה.</p>
         <span class="tag">גיבוש</span><span class="tag">כיף</span>
       </div>
+
       <div class="card">
         <h3>🔴 ערבי בינגו</h3>
-        <p class="sub">הנחיית ערבי בינגו חוויתיים מגבשים ומהנים, מתאים לחברות.</p>
+        <p class="sub">הנחיית ערבי בינגו חווייתיים מגבשים ומהנים, מתאים לחברות.</p>
         <span class="tag">גיבוש</span><span class="tag">כיף</span>
+      </div>
     </div>
   </section>
 
-<section id="gallery">
-  <h2>גלריה</h2>
+  <section id="gallery">
+    <h2>גלריה</h2>
 
-  <p class="gallery-desc">
-    TAI TAI הפקות – הפקות והנחיית אירועים עם אנרגיה, שמחה וחיוך גדול 🎉  
-    ערבי בינגו חווייתיים, ימי הולדת, מסיבות רווקות, הצגות ילדים ואירועים מיוחדים
-  </p>
+    <p class="gallery-desc">
+      TAI TAI הפקות – הפקות והנחיית אירועים עם אנרגיה, שמחה וחיוך גדול 🎉  
+      ערבי בינגו חווייתיים, ימי הולדת, מסיבות רווקות, הצגות ילדים ואירועים מיוחדים
+    </p>
 
-  <div class="gallery">
-    <img src="images/gallery1.jpg" alt="TAI TAI הפקות – ערב בינגו">
-    <img src="images/gallery2.jpg" alt="TAI TAI הפקות – הנחיית אירוע">
-    <img src="images/gallery3.jpg" alt="TAI TAI הפקות – הפעלה לילדים">
-    <img src="images/gallery4.jpg" alt="TAI TAI הפקות – אירוע שמח">
-  </div>
-</section>
+    <div class="gallery">
+      <img src="images/gallery1.png" alt="TAI TAI הפקות – ערב בינגו">
+      <img src="images/gallery2.jpg" alt="TAI TAI הפקות – הנחיית אירוע">
+      <img src="images/gallery3.jpg" alt="TAI TAI הפקות – הפעלה לילדים">
+      <img src="images/gallery4.png" alt="TAI TAI הפקות – אירוע שמח">
+    </div>
+  </section>
 
   <section id="contact">
     <h2>יצירת קשר</h2>
     <p class="sub">
-      📞 054-5896882  שירן <br>
+      📞 054-5896882 שירן <br>
       💬 <a target="_blank" href="https://wa.me/972545896882">שלחי וואטסאפ</a>
     </p>
   </section>
