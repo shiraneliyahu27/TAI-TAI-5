@@ -321,22 +321,25 @@
   <a class="wa" href="https://wa.me/972545896882" target="_blank">💬</a>
 </div>
 
-<div id="lightbox" onclick="this.style.display='none'">
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeImg()">
   <img id="lightboxImg">
 </div>
 
 <script>
-function openImg(src){
-  document.getElementById("lightboxImg").src = src;
-  document.getElementById("lightbox").style.display = "flex";
-}
-function closeImg(){
-  document.getElementById("lightbox").style.display = "none";
-}
+  function openImg(src){
+    document.getElementById("lightboxImg").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+  }
+
+  function closeImg(){
+    document.getElementById("lightbox").style.display = "none";
+  }
 </script>
 
 </body>
 </html>
+
 
 
 
